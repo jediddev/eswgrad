@@ -14,5 +14,6 @@ export const GET = async (req: Request, res: Response) => {
             success: false,
             message: "Failed to fetch students",
         });
+        console.log(e)
     }
 };
