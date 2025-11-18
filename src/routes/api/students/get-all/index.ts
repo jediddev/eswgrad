@@ -13,6 +13,7 @@ export const GET = async (req: Request, res: Response) => {
         res.status(500).json({
             success: false,
             message: "Failed to fetch students",
+            error: e
         });
         console.log(e)
     }
