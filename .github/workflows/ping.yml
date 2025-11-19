@@ -1,0 +1,15 @@
+# Simulated request to your Render project every 14 minutes
+name: Keep Render Alive
+
+on:
+  schedule:
+    - cron: "*/14 * * * *"   # Runs every 14 minutes
+  workflow_dispatch:
+
+jobs:
+  curl-website:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping Render Server
+        run: curl -I https://eswgrad.onrender.com
